@@ -12,6 +12,11 @@ function updateContext(context) {
 
   let scrollPos = checkVal > 0 ? 0 : -checkVal;
 
+  context.beginPath();
+  context.rect(2, 2, gL.illustrationWidth - 4, gL.illustrationHeight - 4);
+  context.fillStyle = 'rgba(225, 225, 225, 1)';
+  context.fill();
+  context.closePath();
 
 
   context.beginPath();

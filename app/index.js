@@ -32,6 +32,5 @@ window.addEventListener('scroll', function() {
   scrll.update();
   scrollTxt.update();
   illustration.update();
-  console.log('mainFrameBottom: ' + gL.mainFrameInfo.botPos);
 })
 

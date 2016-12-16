@@ -71,8 +71,8 @@ let scrollTxt = {
 
     for (let i = 0; i < txtElements.length; i += 1) {
         let txtDiv = makeDiv(txtElements[i].id, txtElements[i].className + ' ' + txtElements[i].vertPos + 'p' );
-        let htAdj = document.documentElement.clientWidth < 700 ? 220 : 5;
-        let leftAdj = document.documentElement.clientWidth < 700 ? 0 : 450;
+        let htAdj = gL.mainW < 550 ? 400 : 5;
+        let leftAdj = gL.mainW < 550 ? 0 : 450;
         
         txtDiv.innerHTML = txtElements[i].txt;
         txtDiv.style.top = (txtElements[i].vertPos + htAdj) + 'px';
@@ -86,9 +86,9 @@ let scrollTxt = {
 
     update: function() {
       let fadeDivTop = document.getElementById('fade-div-top');
-
-      let htAdj = gL.viewWt < 700 ? 340 : 5;
-      if (gL.viewWt < 500) htAdj = 220;
+      // HACK ?? - should this should be in the scrll update instead of here
+      let htAdj = gL.mainW < 550 ? 325 : 5;
+      if (gL.mainW < 550) htAdj = 325;
 
       if (gL.mainFrameInfo.topPos > 0) {
         fadeDivTop.style.height = htAdj + 'px';

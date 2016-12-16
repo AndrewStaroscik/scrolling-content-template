@@ -25,13 +25,16 @@ const scrll = {
   }, 
   update: function() {
     scrollPosUpdate();
-    console.log(gL.illustrationWrapper);
+    //console.log(gL.illustrationWrapper);
     if (gL.mainFrameInfo.topPos < 0) {
       gL.topButton.style.visibility = 'visible';
-      gL.illustrationWrapper.style.top = (50 + (-gL.mainFrameInfo.topPos)) + 'px';
+      // gL.illustrationWrapper.style.position = 'fixed';
+      // gL.illustrationWrapper.style.top = 50 + 'px';
+      gL.illustrationWrapper.style.top = (10 + (-gL.mainFrameInfo.topPos)) + 'px';
     } else {
       gL.topButton.style.visibility = 'hidden';
-      gL.illustrationWrapper.style.top = 50 + 'px';
+      // gL.illustrationWrapper.style.position = 'absolute';
+      gL.illustrationWrapper.style.top = 10 + 'px';
     }
 
     if (gL.viewHt < gL.mainFrameInfo.botPos) {
@@ -43,10 +46,16 @@ const scrll = {
     //gL.topButton.style.bottom = (gL.mainFrameInfo.botPos) + 'px';
     gL.topButton.style.left = (gL.mainFrameInfo.left + gL.mainFrameInfo.width - 125) + 'px';
 
-    console.log('viewHt: ' + gL.viewHt);
-    console.log('mainFbottom: ' + gL.mainFrameInfo.botPos);
-    console.log('mainFtop: ' + gL.mainFrameInfo.topPos);
-    console.log(' ')
+    if (gL.mainW < 550) {
+      gL.illustrationWrapper.style.left = ((gL.mainW - gL.illustrationWidth)/2) + 'px';
+    } else {
+      gL.illustrationWrapper.style.left = (10) + 'px';
+    }
+
+    //console.log('viewHt: ' + gL.viewHt);
+    //console.log('mainFbottom: ' + gL.mainFrameInfo.botPos);
+    //console.log('mainFtop: ' + gL.mainFrameInfo.topPos);
+    console.log('mainW: ' + gL.mainW);
 
   }
 

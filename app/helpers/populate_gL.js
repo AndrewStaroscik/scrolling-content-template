@@ -6,6 +6,11 @@ let populate_gL = function() {
   gL.illustrationWidth = 400;
   gL.illustrationHeight = 400;
 
+  if (gL.mainW < 550) {
+    gL.illustrationWidth = 310;
+    gL.illustrationHeight = 310;
+  }
+
 
 
   // scales for d3 controls
