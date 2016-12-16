@@ -1,7 +1,7 @@
 import gL from './gL';
 import populate_gL from './helpers/populate_gL';
 
-import makeDiv from './helpers/makediv';
+import makeDiv from './helpers/makeDiv';
 import scrll from './helpers/scrll';
 import scrollToTop from './helpers/scrollToTop';
 import scrollTxt from './components/txt';
