@@ -1,20 +1,10 @@
 #About
 
-This is a basic webpack build system for developing single static pages (as opposed to static sites or single page apps).
+This is a basic webpack build system with some content designed for scrolling content. It is a modification of the earlier [webpack build system](https://github.com/AndrewStaroscik/webpack-single-page-builder) I put together. 
 
-Its output is an index.html file with one .js one .css file. This allows the creation of content that uses javascript libraries such as gsap, d3, and others to create content that can be easily embedded into any cms or static site generator without having to customize the content to conform to the particular demands of each platform. 
+#To get started
 
-As long as the platform allows for custom javascript and css to be used on individual pages, this should work.
-
-I started with code from the [SurviveJS Webpack Book](http://survivejs.com/webpack/introduction/) and modified it to meet my needs. 
-
-It is set up to convert stylus to css with autoprefixer for browser compatibility.
-
-Babel is enabled with the es2015 preset. 
-
-The template index file has a div with id of `mainFrame`. The intended use is to have all javascript written target that div. Once the build is done, any html file that contains a div with the id of mainFrame that calls the javascript file should have that code work by injecting content into that div. 
-
-The names of the js and css files can be set in the `webpack.config.js` by modifying the `jsBundle` and  `cssBundle` vars.
+run `npm install`
 
 #Development
 
